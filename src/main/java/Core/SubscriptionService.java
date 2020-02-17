@@ -1,4 +1,4 @@
-package ru.ok.adminapp.core;
+package Core;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.web.client.RestTemplate;

@@ -2,12 +2,18 @@ package Core;
 
 import javax.persistence.*;
 import java.util.List;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class Main {
+    private static int APPLICATION_PORT = 8080;
     private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
             .createEntityManagerFactory("Core");
+
     public static void main(String[] args){
-        getSubs();
+        //getSubs();
+        SpringApplication.run(Main.class, args);
         ENTITY_MANAGER_FACTORY.close();
     }
 
