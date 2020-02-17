@@ -1,4 +1,4 @@
-package ru.ok.adminapp.core;
+package Core;
 
 public class Event {
     private long postId;
