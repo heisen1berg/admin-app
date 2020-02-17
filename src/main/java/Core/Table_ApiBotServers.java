@@ -3,6 +3,8 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+// Одна из двух таблиц БД, пока нереализована в самой БД, мучаюсь с foreign ключами в Hibernate
+
 @Entity
 @Table(name = "ApiBotServers")
 public class Table_ApiBotServers implements Serializable {

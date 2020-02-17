@@ -1,5 +1,6 @@
 package Core;
 
+// Реализация подписки
 
 public class Subscription {
 

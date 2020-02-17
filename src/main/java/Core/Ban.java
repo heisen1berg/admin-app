@@ -1,5 +1,7 @@
 package Core;
 
+// Реализация бана
+
 public class Ban {
     private long postId;
     private long commentId;

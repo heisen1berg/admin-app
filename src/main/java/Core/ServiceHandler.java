@@ -7,6 +7,8 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.*;
 
+// Автомодерация
+
 public class ServiceHandler {
     final private String WORD_DICT = "badWords.txt";
 

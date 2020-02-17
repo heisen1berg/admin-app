@@ -1,5 +1,7 @@
 package Core;
 
+// Реализация коммента (хз почему ребята назвали ивентом)
+
 public class Event {
     private long postId;
     private long commentId;

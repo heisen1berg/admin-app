@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+//Контроллер, который будет использоваться для общения с бот-апи, прием постов и комментов к ним и т.д.
+
 @RestController
 public class RestEventController {
     final static private String BAN_URI = "/bot-api/ban";
