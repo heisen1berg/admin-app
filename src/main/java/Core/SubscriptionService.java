@@ -10,11 +10,13 @@ import java.net.URI;
 public class SubscriptionService {
 
     private static RestTemplate restTemplate;
+    // Адрес приема подписок у бот-апи
+    private static final String SUBSCRIBE_URI = "http://localhost:8081/subscribe";
 
-    public static void subscribe(String subscribeURI, long adminID, long postID) {
+    public static void subscribe(long adminID, long postID) {
         restTemplate = new RestTemplate();
         Main.addSub((int)postID);
         final HttpEntity<Subscription> request = new HttpEntity<>(new Subscription(adminID, postID));
-        final URI sub = restTemplate.postForLocation(subscribeURI, request, Subscription.class);
+        final URI sub = restTemplate.postForLocation(SUBSCRIBE_URI, request, Subscription.class);
     }
 }

@@ -12,11 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class RestEventController {
     final static private String BAN_URI = "/bot-api/ban";
     final static private String EVENTS_URI = "/admin/events";
+    final static private String SUBSCRIBE_URI = "/admin/subscribe";
 
     @PostMapping(BAN_URI)
     public ResponseEntity processBan(@RequestBody Ban ban) {
         System.err.printf("Post %d, comment %d banned\n",
                 ban.getPostId(), ban.getCommentId());
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    //Подписка админа по HTTP
+    @PostMapping(SUBSCRIBE_URI)
+    public ResponseEntity subscribe(@RequestBody Subscription subscription) {
+        SubscriptionService.subscribe(subscription.getAdminID(), subscription.getPostID());
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
