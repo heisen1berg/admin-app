@@ -1,11 +1,11 @@
 package ru.ok.adminapp.core;
 
-public class Event {
+public class Comment {
     private long postId;
     private long commentId;
     private String text;
 
-    public Event(long postId, long commentId, String text) {
+    public Comment(long postId, long commentId, String text) {
         this.postId = postId;
         this.commentId = commentId;
         this.text = text;

@@ -1,51 +1,57 @@
 package ru.ok.adminapp.core;
 
-import org.springframework.http.HttpEntity;
-import org.springframework.web.client.RestTemplate;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.util.*;
-import java.util.stream.*;
 
+@Service
 public class ServiceHandler {
-    final private String WORD_DICT = "badWords.txt";
+    final private Logger logger =
+            LogManager.getLogger(ServiceHandler.class);
+    final public static String WORD_DICT = "badWords.txt";
+    final public static String LINE_SEP = System.lineSeparator();
 
-    void addWord(String word) {
+    private void writeWord(String word, Writer wr) throws IOException {
+        wr.write(LINE_SEP + word + LINE_SEP);
+    }
+
+    private void logWriteError(IOException e) {
+        logger.debug("Failed to write word to dict", e);
+    }
+
+    public void addWord(String word) {
         try (BufferedWriter wr = new BufferedWriter(new FileWriter(WORD_DICT, true))) {
-            wr.write(word + "\n");
+            writeWord(word, wr);
         } catch (IOException e) {
-            e.printStackTrace();
+            logWriteError(e);
         }
     }
 
     void deleteWord(String word) {
-        List<String> lines;
         try (BufferedReader br = new BufferedReader(
-                new FileReader(WORD_DICT))) {
-            lines = br.lines().filter(s -> !s.equals(word)).collect(Collectors.toList());
+                new FileReader(WORD_DICT));
+             BufferedWriter wr = new BufferedWriter(new FileWriter(WORD_DICT))) {
+                br.lines().filter(s -> !s.equals(word)).forEach(w -> {
+                    try {
+                        writeWord(w, wr);
+                    } catch (IOException e) {
+                        logWriteError(e);
+                    }
+                });
         } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-        try (BufferedWriter wr = new BufferedWriter(new FileWriter(WORD_DICT))) {
-            for (String line : lines) {
-                wr.write(line + "\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+            logger.debug("Failed while processing dict", e);
         }
     }
 
-    void process(Event event, String botApiURI) {
-        if (!isBad(event.getText())) {
+    public void process(Comment comment) {
+        if (!isBad(comment.getText())) {
             return;
         }
 
-        RestTemplate restTemplate = new RestTemplate();
-        HttpEntity<Ban> request = new HttpEntity<>(new Ban(
-                event.getPostId(), event.getCommentId()
-        ));
-        restTemplate.postForLocation(botApiURI, request, Ban.class);
+        Ban ban = new Ban(comment.getPostId(), comment.getCommentId());
+        //  ban using RMI
     }
 
     private boolean isBad(String text) {
@@ -53,7 +59,7 @@ public class ServiceHandler {
                 new FileReader(WORD_DICT))) {
             return br.lines().anyMatch(text::contains);
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.debug("Failed to read dict", e);
             return false;
         }
     }
