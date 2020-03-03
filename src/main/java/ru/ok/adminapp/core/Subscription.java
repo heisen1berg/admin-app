@@ -5,10 +5,20 @@ public class Subscription {
 
     private long adminID;
     private long postID;
+    private long lastEditedTime;
 
-    public Subscription(long adminID, long postID) {
+    public Subscription(long adminID, long postID, long lastEditedTime) {
         this.adminID = adminID;
         this.postID = postID;
+        this.lastEditedTime = lastEditedTime;
+    }
+
+    public long getLastEditedTime() {
+        return lastEditedTime;
+    }
+
+    public void setLastEditedTime(long lastEditedTime) {
+        this.lastEditedTime = lastEditedTime;
     }
 
     public long getAdminID() {
