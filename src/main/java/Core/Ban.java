@@ -2,7 +2,9 @@ package Core;
 
 // Реализация бана
 
-public class Ban {
+import java.io.*;
+
+public class Ban implements Serializable {
     private long postId;
     private long commentId;
 
