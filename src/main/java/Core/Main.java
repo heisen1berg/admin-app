@@ -1,65 +1,29 @@
 package Core;
 
+import javax.annotation.PostConstruct;
 import javax.persistence.*;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-// мейн, тут методы работы с бд, добавление элементов  в бд и чтение бд, все работает,
-// спринг запускается, курл хттп запросы принимает
+import Core.DBPackage.*;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class Main {
-    private static int APPLICATION_PORT = 8080;
-    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
-            .createEntityManagerFactory("Core");
+public class Main extends SpringBootServletInitializer{
+    @Autowired
+    DBService service;
 
-    public static void main(String[] args){
-        addSub(4);
-        getSubs();
-        //SpringApplication.run(Main.class, args);
-        ENTITY_MANAGER_FACTORY.close();
+
+    @PostConstruct
+    public void startUp() {
+
     }
-    public static void addSub(int serverid){
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-        EntityTransaction et = null;
-        Table_Subs ts;
-        try {
-            et = em.getTransaction();
-            et.begin();
-
-            ts = new Table_Subs();
-            ts.setserverid(serverid);
-
-            // Save the customer object
-            em.persist(ts);
-            et.commit();
-        } catch (Exception ex) {
-            // If there is an exception rollback changes
-            if (et != null) {
-                et.rollback();
-            }
-            ex.printStackTrace();
-        } finally {
-            // Close EntityManager
-            em.close();
-        }
-    }
-    public static void getSubs() {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-
-        String strQuery = "SELECT c FROM Table_Subs c WHERE c.id IS NOT NULL";
-        TypedQuery<Table_Subs> tq = em.createQuery(strQuery, Table_Subs.class);
-        List<Table_Subs> subs;
-        try {
-            subs = tq.getResultList();
-            subs.forEach(sub->System.out.println(sub.getserverid()));
-        }
-        catch(NoResultException ex) {
-            ex.printStackTrace();
-        }
-        finally {
-            em.close();
-        }
+    public static void main(String[] args)
+    {
+        SpringApplication.run(Main.class, args);
     }
 }

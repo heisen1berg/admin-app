@@ -3,16 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="3a142b2e-43b4-4119-8c7f-d0f94ed621b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Ban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Ban.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Subscription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Table_ApiBotServers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Table_ApiBotServers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Table_Subs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Table_Subs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Table_ApiBotServers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Table_Subs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Ban.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Ban.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Event.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/RestEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/RestEventController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/ServiceHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/ServiceHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Subscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/SubscriptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +26,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1XpLu4TfjGOex1sPj9ODkV97wq2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -40,9 +53,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,6 +83,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="admin-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Core.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -87,6 +109,7 @@
       <workItem from="1581738332668" duration="123000" />
       <workItem from="1581739207032" duration="1150000" />
       <workItem from="1581931040291" duration="778000" />
+      <workItem from="1583326100480" duration="6541000" />
     </task>
     <servers />
   </component>
@@ -98,22 +121,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1581903692794" />
-    <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1581927361620">
+    <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1583339695117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581927361620" />
-    <state width="1323" height="190" key="GridCell.Tab.0.center" timestamp="1581927361619">
+    <state width="1323" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583339695117" />
+    <state width="1323" height="190" key="GridCell.Tab.0.center" timestamp="1583339695117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581927361619" />
-    <state width="1323" height="190" key="GridCell.Tab.0.left" timestamp="1581927361619">
+    <state width="1323" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583339695117" />
+    <state width="1323" height="190" key="GridCell.Tab.0.left" timestamp="1583339695117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581927361619" />
-    <state width="1323" height="190" key="GridCell.Tab.0.right" timestamp="1581927361620">
+    <state width="1323" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583339695117" />
+    <state width="1323" height="190" key="GridCell.Tab.0.right" timestamp="1583339695117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581927361620" />
+    <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583339695117" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1581901938666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

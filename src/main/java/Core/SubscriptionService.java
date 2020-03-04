@@ -13,7 +13,7 @@ public class SubscriptionService {
 
     public static void subscribe(String subscribeURI, long adminID, long postID) {
         restTemplate = new RestTemplate();
-        Main.addSub((int)postID);
+        //Main.addSub((int)postID);
         final HttpEntity<Subscription> request = new HttpEntity<>(new Subscription(adminID, postID));
         final URI sub = restTemplate.postForLocation(subscribeURI, request, Subscription.class);
     }
