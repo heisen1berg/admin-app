@@ -6,24 +6,28 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-//Контроллер, который будет использоваться для общения с бот-апи, прием постов и комментов к ним и т.д.
+import javax.annotation.Resource;
 
 @RestController
 public class RestEventController {
-    final static private String BAN_URI = "/bot-api/ban";
-    final static private String EVENTS_URI = "/admin/events";
+    @Resource
+    private ServiceHandler serviceHandler;
 
-    @PostMapping(BAN_URI)
-    public ResponseEntity processBan(@RequestBody Ban ban) {
-        System.err.printf("Post %d, comment %d banned\n",
-                ban.getPostId(), ban.getCommentId());
+    @PostMapping("/admin/comments")
+    public ResponseEntity<HttpStatus> processEvent(@RequestBody Comment comment) {
+        serviceHandler.process(comment);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @PostMapping(EVENTS_URI)
-    public ResponseEntity processEvent(@RequestBody Event event) {
-        new ServiceHandler().process(event, "http://localhost:8080" +
-                BAN_URI);
+    @PostMapping("/admin/dict/add-word")
+    public ResponseEntity<HttpStatus> processAdd(@RequestBody String word) {
+        serviceHandler.addWord(word);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @PostMapping("/admin/dict/delete-word")
+    public ResponseEntity<HttpStatus> processDelete(@RequestBody String word) {
+        serviceHandler.deleteWord(word);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 }

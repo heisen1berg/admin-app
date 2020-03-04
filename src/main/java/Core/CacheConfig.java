@@ -1,4 +1,4 @@
-package ru.ok.adminapp.core;
+package Core;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

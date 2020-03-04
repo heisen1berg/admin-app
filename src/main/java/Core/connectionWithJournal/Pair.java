@@ -1,4 +1,4 @@
-package ru.ok.adminapp.core.connectionWithJournal;
+package Core.connectionWithJournal;
 
 public class Pair {
     private long postId;

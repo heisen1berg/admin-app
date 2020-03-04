@@ -1,4 +1,4 @@
-package ru.ok.adminapp.core.connectionWithJournal;
+package Core.connectionWithJournal;
 
 import java.io.Serializable;
 

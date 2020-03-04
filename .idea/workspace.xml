@@ -4,19 +4,18 @@
     <list default="true" id="3a142b2e-43b4-4119-8c7f-d0f94ed621b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Table_ApiBotServers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Table_Subs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/Ban.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Ban.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/RestEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/RestEventController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/ServiceHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/ServiceHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Subscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/SubscriptionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/CacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/CacheConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/RestEventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/ServiceHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/SubscriptionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/connectionWithJournal/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/connectionWithJournal/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/connectionWithJournal/RMIComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/connectionWithJournal/RMIComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/connectionWithJournal/RMICommentInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/connectionWithJournal/RMICommentInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +61,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Core" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Core.Main" />
       <module name="admin-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Core.*" />
+          <option name="PATTERN" value="Core.connectionWithJournal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,6 +114,7 @@
       <workItem from="1581739207032" duration="1150000" />
       <workItem from="1581931040291" duration="778000" />
       <workItem from="1583326100480" duration="6541000" />
+      <workItem from="1583343078393" duration="1785000" />
     </task>
     <servers />
   </component>
@@ -121,6 +126,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1581903692794" />
+    <state x="479" y="235" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1583344032029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="235" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1583344032029" />
     <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1583339695117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -137,10 +146,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583339695117" />
-    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1581901938666">
+    <state x="368" y="38" key="Maven.ArtifactSearchDialog" timestamp="1583344159866">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1581901938666" />
+    <state x="368" y="38" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1583344159866" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1581739445687">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

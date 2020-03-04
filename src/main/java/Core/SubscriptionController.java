@@ -1,4 +1,4 @@
-package ru.ok.adminapp.core;
+package Core;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
