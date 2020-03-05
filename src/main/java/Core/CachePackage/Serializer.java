@@ -6,11 +6,11 @@ import java.io.*;
 @Component
 public class Serializer {
 
-    private static final String PREFIX = "/cache/";
+    private static final String PREFIX = "cache/";
 
-    public void serialize(String key, Serializable ser) {
+    public void serialize(Key key, Serializable ser) {
         try {
-            FileOutputStream fos = new FileOutputStream(PREFIX + ser.getClass().toString()+key);
+            FileOutputStream fos = new FileOutputStream(PREFIX + key.getClassString()+"_"+key.getKey());
             ObjectOutputStream out = new ObjectOutputStream(fos);
             out.writeObject(ser);
             out.close();
@@ -18,10 +18,10 @@ public class Serializer {
         }
     }
 
-    public Serializable deserialize(Long key) {
+    public Serializable deserialize(Key key) {
         Serializable ser = null;
         try {
-            FileInputStream fis = new FileInputStream(PREFIX + ser.getClass().toString() + key);
+            FileInputStream fis = new FileInputStream(PREFIX + key.getClassString()+"_"+ key.getKey());
             ObjectInputStream in = new ObjectInputStream(fis);
             ser = (Serializable) in.readObject();
             in.close();
