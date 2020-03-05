@@ -1,6 +1,5 @@
 package Core.Services;
 
-import Core.DataStructures.Ban;
 import Core.DataStructures.Comment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,7 +47,9 @@ public class AutoModService {
     }
 
     public boolean process(Comment comment) {
-        return !isBad(comment.getText());
+        boolean ret=isBad(comment.getText());
+        if(ret){comment.setAutoModerated(true);}
+        return ret;
         //Ban ban = new Ban(comment.getPostId(), comment.getCommentId());
     }
 

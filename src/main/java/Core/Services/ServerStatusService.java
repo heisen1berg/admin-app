@@ -18,29 +18,19 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @Service
-public class SubscriptionService {
+public class ServerStatusService {
+    private static final String BOT_API_STATE_URL = "http://localhost:8080/bot-api/state";
+    private static final String BOT_API_SUBSCRIPTION_STATE_URL = "http://localhost:8080/bot-api/subscriptionstate";
+
 
     private static RestTemplate restTemplate = new RestTemplate();
     private static long lastActionTime = Long.MAX_VALUE;
-    private static final String BOT_API_SUBSCRIBE_URL = "http://localhost:8080/bot-api/subscribe";
-    private static final String BOT_API_STATE_URL = "http://localhost:8080/bot-api/state";
-    private static final String BOT_API_SUBSCRIPTION_STATE_URL = "http://localhost:8080/bot-api/subscriptionstate";
-    private static final int ADMIN_ID=0;
-    @Autowired
-    private DBService dbService;
+
     @Autowired
     private CacheService cacheService;
 
-    public void subscribe(long postID) {
-        Date date=new Date();
-        dbService.addPost(new Post(postID, date,date));
-        final HttpEntity<Subscription> request = new HttpEntity<>(new Subscription(ADMIN_ID, postID, date.getTime()));
-        restTemplate.postForLocation(BOT_API_SUBSCRIBE_URL, request, Subscription.class);
-    }
-
-
     // Сравниваем время взаимодействия с бот апи
-    @Scheduled(fixedDelay = 10000)
+    /*@Scheduled(fixedDelay = 10000)
     private void checkForBotApiActivity() throws ExecutionException {
         if (Instant.now().getEpochSecond() - lastActionTime > 120000) {
             if (!checkState(BOT_API_STATE_URL, "")) {
@@ -60,7 +50,7 @@ public class SubscriptionService {
                 }
             }
         }
-    }
+    }*/
 
     // Проверяем, все ли в порядке с бот апи
     private <T> boolean checkState(String url, T t) {

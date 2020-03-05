@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 @Component
-public class CustomCacheLoader extends CacheLoader<Long, Serializable> {
+public class CustomCacheLoader extends CacheLoader<Key, Serializable> {
     @Autowired
     Serializer ser;
 
     @Override
-    public Serializable load(Long key){
+    public Serializable load(Key key){
         return ser.deserialize(key);
     }
 }

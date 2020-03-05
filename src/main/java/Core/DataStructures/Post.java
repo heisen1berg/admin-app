@@ -12,18 +12,18 @@ public class Post {
     @Id
     Long PostID;
     Date createdAt;
-    Date lastRequestTime;
+    Date lastCommentTime;
 
     public Long getPostID(){return PostID;}
     public void setPostID(Long PostID){this.PostID=PostID;}
     public Date getCreatedAt(){return createdAt;}
     public void setCreatedAt(Date createdAt){this.createdAt=createdAt;}
-    public Date getLastRequestTime(){return lastRequestTime;}
-    public void setLastRequestTime(Date lastRequestTime){this.lastRequestTime=lastRequestTime;}
+    public Date getLastCommentTime(){return lastCommentTime;}
+    public void setLastCommentTime(Date lastCommentTime){this.lastCommentTime = lastCommentTime;}
     public Post(){}
-    public Post(Long PostID, Date createdAt, Date lastRequestTime){
+    public Post(Long PostID, Date createdAt, Date lastCommentTime){
         this.PostID=PostID;
         this.createdAt=createdAt;
-        this.lastRequestTime=lastRequestTime;
+        this.lastCommentTime =lastCommentTime;
     }
 }
