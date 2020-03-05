@@ -1,16 +1,14 @@
-package Core;
+package Core.DataStructures;
 
-// Реализация бана
-
-import java.io.*;
+import java.io.Serializable;
 
 public class Ban implements Serializable {
     private long postId;
     private long commentId;
 
-    public Ban(long postId, long commentId) {
-        this.postId = postId;
-        this.commentId = commentId;
+    public Ban(Comment comment) {
+        postId = comment.getPostId();
+        commentId = comment.getCommentId();
     }
 
     public long getCommentId() {

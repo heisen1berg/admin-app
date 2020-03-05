@@ -1,4 +1,4 @@
-package Core.DBPackage;
+package Core.DataStructures;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,7 +11,6 @@ public class Post {
 
     @Id
     Long PostID;
-
     Date createdAt;
     Date lastRequestTime;
 

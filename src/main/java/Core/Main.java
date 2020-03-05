@@ -1,18 +1,17 @@
 package Core;
 
 import javax.annotation.PostConstruct;
-import javax.persistence.*;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import java.util.List;
 
+import Core.Services.DBService;
+import Core.Services.CacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import Core.DBPackage.*;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
+@EnableCaching
 public class Main extends SpringBootServletInitializer{
     @Autowired
     DBService service;

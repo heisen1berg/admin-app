@@ -1,5 +1,7 @@
-package Core;
+package Core.Services;
 
+import Core.DataStructures.Ban;
+import Core.DataStructures.Comment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -7,9 +9,9 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 
 @Service
-public class ServiceHandler {
+public class AutoModService {
     final private Logger logger =
-            LogManager.getLogger(ServiceHandler.class);
+            LogManager.getLogger(AutoModService.class);
     final public static String WORD_DICT = "badWords.txt";
     final public static String LINE_SEP = System.lineSeparator();
 
@@ -29,7 +31,7 @@ public class ServiceHandler {
         }
     }
 
-    void deleteWord(String word) {
+    public void deleteWord(String word) {
         try (BufferedReader br = new BufferedReader(
                 new FileReader(WORD_DICT));
              BufferedWriter wr = new BufferedWriter(new FileWriter(WORD_DICT))) {
@@ -45,13 +47,9 @@ public class ServiceHandler {
         }
     }
 
-    public void process(Comment comment) {
-        if (!isBad(comment.getText())) {
-            return;
-        }
-
-        Ban ban = new Ban(comment.getPostId(), comment.getCommentId());
-        //  ban using RMI
+    public boolean process(Comment comment) {
+        return !isBad(comment.getText());
+        //Ban ban = new Ban(comment.getPostId(), comment.getCommentId());
     }
 
     private boolean isBad(String text) {

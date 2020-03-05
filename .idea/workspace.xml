@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a142b2e-43b4-4119-8c7f-d0f94ed621b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Core/DBPackage/PostRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/CacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/CacheConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/RestEventController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/ServiceHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/SubscriptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/SubscriptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/connectionWithJournal/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/connectionWithJournal/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/connectionWithJournal/RMIComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/connectionWithJournal/RMIComment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ok/adminapp/core/connectionWithJournal/RMICommentInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/connectionWithJournal/RMICommentInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Ban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Ban.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CacheConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DBPackage/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Services/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DBPackage/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DBPackage/Repo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/RestEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/MainLogic/RestEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/ServiceHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/MainLogic/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/SubscriptionService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,7 +58,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-examples/java-examples" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -114,7 +116,9 @@
       <workItem from="1581739207032" duration="1150000" />
       <workItem from="1581931040291" duration="778000" />
       <workItem from="1583326100480" duration="6541000" />
-      <workItem from="1583343078393" duration="1785000" />
+      <workItem from="1583343078393" duration="1959000" />
+      <workItem from="1583354414112" duration="5558000" />
+      <workItem from="1583367268282" duration="7490000" />
     </task>
     <servers />
   </component>
@@ -130,6 +134,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="235" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1583344032029" />
+    <state x="357" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583356462009">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="357" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1583356462009" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1583359760474">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583359760474" />
     <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1583339695117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
