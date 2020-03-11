@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 @Component
 public class CustomCacheLoader extends CacheLoader<Key, Serializable> {
+    //храним объекты
     @Autowired
     Serializer ser;
-
     @Override
     public Serializable load(Key key){
         return ser.deserialize(key);

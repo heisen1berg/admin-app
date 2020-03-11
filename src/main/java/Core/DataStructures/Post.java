@@ -7,23 +7,28 @@ import java.util.Date;
 
 @Entity
 @Table(name="Posts")
+//PostEntity
 public class Post {
-
     @Id
-    Long PostID;
-    Date createdAt;
-    Date lastCommentTime;
+    //camel-case, все с маленькой в бд
+    private long PostID;
+    private Date createdAt;
+    private Date lastCommentTime;
+    private boolean activeFlag;
 
-    public Long getPostID(){return PostID;}
-    public void setPostID(Long PostID){this.PostID=PostID;}
+    public long getPostID(){return PostID;}
+    public void setPostID(long PostID){this.PostID=PostID;}
     public Date getCreatedAt(){return createdAt;}
     public void setCreatedAt(Date createdAt){this.createdAt=createdAt;}
     public Date getLastCommentTime(){return lastCommentTime;}
     public void setLastCommentTime(Date lastCommentTime){this.lastCommentTime = lastCommentTime;}
+    public boolean getActiveFlag(){return activeFlag;}
+    public void setActiveFlag(boolean activeFlag){this.activeFlag=activeFlag;}
     public Post(){}
-    public Post(Long PostID, Date createdAt, Date lastCommentTime){
+    public Post(long PostID, Date createdAt, Date lastCommentTime){
         this.PostID=PostID;
         this.createdAt=createdAt;
         this.lastCommentTime =lastCommentTime;
+        this.activeFlag=true;
     }
 }

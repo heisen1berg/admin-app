@@ -8,11 +8,13 @@ import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
+
 @Service
 public class BanFlow {
     private static final String JOURNAL_BAN_URL="";
-
-    @Autowired
+    //заменить автовиреды
+    @Resource
     CacheService cacheService;
 
     private static RestTemplate restTemplate = new RestTemplate();
@@ -20,7 +22,6 @@ public class BanFlow {
     public void createBan(Comment comment){
         Ban ban=new Ban(comment);
         cacheService.putBan(ban);
-        System.out.println("Ban cached");
         final HttpEntity<Ban> request = new HttpEntity<>(ban);
         //restTemplate.postForLocation(JOURNAL_BAN_URL,request,Ban.class);
     }

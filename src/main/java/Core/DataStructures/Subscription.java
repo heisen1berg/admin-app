@@ -4,15 +4,16 @@ package Core.DataStructures;
 import java.io.Serializable;
 import java.util.Date;
 public class Subscription implements Serializable {
-
-    private long adminID;
-    private long postID;
+    private long adminId;
+    private long postId;
     private Date lastCommentTime;
+    private boolean activeFlag;
 
-    public Subscription(long adminID, long postID, Date lastEditedTime) {
-        this.adminID = adminID;
-        this.postID = postID;
+    public Subscription(long postId, Date lastEditedTime, long adminId) {
+        this.adminId=adminId;
+        this.postId = postId;
         this.lastCommentTime = lastEditedTime;
+        activeFlag=true;
     }
 
     public Date getLastCommentTime() {
@@ -23,21 +24,19 @@ public class Subscription implements Serializable {
         this.lastCommentTime = lastEditedTime;
     }
 
-    public long getAdminID() {
-        return adminID;
+    public long getPostId() {
+        return postId;
     }
 
-    public void setAdminID(int adminID) {
-        this.adminID = adminID;
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
 
-    public long getPostID() {
-        return postID;
-    }
+    public boolean isActive(){return activeFlag;}
+    public void setActive(boolean activeFlag){this.activeFlag=activeFlag;}
 
-    public void setPostID(int postID) {
-        this.postID = postID;
-    }
+    public long getAdminId(){return adminId;}
+    public void setAdminId(Long adminId){this.adminId = adminId;}
 }
 
 

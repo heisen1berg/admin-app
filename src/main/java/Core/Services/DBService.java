@@ -1,4 +1,5 @@
 package Core.Services;
+import java.util.Date;
 import java.util.List;
 
 import Core.DBPackage.PostRepo;
@@ -24,6 +25,14 @@ public class DBService {
             System.out.println(e.getMessage());
             return false;
         }
-
     }
+    public List<Post> getAllSubs(){
+        return repo.findAll();
+    }
+    public void updateLastCommentTime(Long id){
+        Post p=getPostById(id);
+        p.setLastCommentTime(new Date());
+        addPost(p);
+    }
+    public Post getPostById(Long id){return repo.findById(id).get();}
 }

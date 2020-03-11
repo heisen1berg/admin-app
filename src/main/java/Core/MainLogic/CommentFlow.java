@@ -15,16 +15,12 @@ import java.util.concurrent.ExecutionException;
 
 @Service
 public class CommentFlow {
-    private static final int ADMIN_ID=0;
     @Autowired
     private CacheService cacheService;
-
     @Autowired
     private DBService dbService;
-
     @Autowired
     private AutoModService amService;
-
     @Autowired
     private BanFlow banFlow;
 
@@ -32,17 +28,14 @@ public class CommentFlow {
         boolean auto_moderation_trigger=amService.process(comment);
 
         cacheService.putComment(comment);
-        System.out.println("Comment cached");
         try {
             cacheService.updateLastCommentTime(comment.getPostId());
-            System.out.println("Post last comment time updated and cached");
         }
         catch(CacheLoader.InvalidCacheLoadException e){
+            //игнорить
             Date date=new Date();
-            cacheService.putSub(new Subscription(ADMIN_ID, comment.getPostId(), date));
-            System.out.println("Subscription cached");
+            cacheService.putSub(new Subscription(comment.getPostId(), date,ControlPanel.adminId));
             dbService.addPost(new Post(comment.getPostId(),date,date));
-            System.out.println("Post subscription added to DB");
         }
 
         if(auto_moderation_trigger){
