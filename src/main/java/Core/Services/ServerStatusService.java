@@ -2,13 +2,13 @@ package Core.Services;
 
 import Core.DataStructures.Subscription;
 import Core.MainLogic.ControlPanel;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 
+import javax.annotation.Resource;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
@@ -23,10 +23,10 @@ public class ServerStatusService {
     private RestTemplate restTemplate = new RestTemplate();
     private Date lastRequestTime;
 
-    @Autowired
+    @Resource
     private CacheService cacheService;
 
-    @Autowired
+    @Resource
     private ControlPanel controlPanel;
 
     public void updateLastRequestTime(){

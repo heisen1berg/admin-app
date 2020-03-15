@@ -1,7 +1,7 @@
 package Core.MainLogic;
 
 import Core.DataStructures.Comment;
-import Core.DataStructures.Post;
+import Core.DataStructures.PostEntity;
 import Core.DataStructures.Subscription;
 import Core.Services.AutoModService;
 import Core.Services.CacheService;
@@ -10,18 +10,17 @@ import com.google.common.cache.CacheLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 @Service
 public class CommentFlow {
-    @Autowired
+    @Resource
     private CacheService cacheService;
-    @Autowired
-    private DBService dbService;
-    @Autowired
+    @Resource
     private AutoModService amService;
-    @Autowired
+    @Resource
     private BanFlow banFlow;
 
     public void addComment(Comment comment) throws ExecutionException {
@@ -33,9 +32,9 @@ public class CommentFlow {
         }
         catch(CacheLoader.InvalidCacheLoadException e){
             //игнорить
-            Date date=new Date();
+            /*Date date=new Date();
             cacheService.putSub(new Subscription(comment.getPostId(), date,ControlPanel.adminId));
-            dbService.addPost(new Post(comment.getPostId(),date,date));
+            dbService.addPost(new PostEntity(comment.getPostId(),date,date));*/
         }
 
         if(auto_moderation_trigger){

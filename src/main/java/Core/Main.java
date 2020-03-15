@@ -15,12 +15,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import javax.annotation.Resource;
 import javax.swing.*;
 
 
 @SpringBootApplication
 public class Main extends SpringBootServletInitializer{
-    @Autowired
+    @Resource
     private ControlPanel controlPanel;
     @PostConstruct
     public void onStartUp(){
