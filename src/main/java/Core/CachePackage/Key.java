@@ -1,17 +1,21 @@
 package Core.CachePackage;
 
-public class Key {
+public class Key extends Object {
+    private long id;
     private Class cl;
-    private long key;
-    public Key(Long key, Class cl){
+
+    public Key(long id, Class cl){
+        this.id=id;
         this.cl=cl;
-        this.key=key;
     }
-    public long getKey(){
-        return key;
-    }
-    public String getClassString(){
-        String s=cl.toString();
-        return s.substring(s.lastIndexOf(".")+1,s.length()).toLowerCase();
+    @Override
+    public boolean equals(Object obj){
+        try {
+            Key key = (Key) obj;
+            return id==key.id && cl.toString().equals(key.cl.toString());
+        }
+        catch(Exception e){
+            return false;
+        }
     }
 }

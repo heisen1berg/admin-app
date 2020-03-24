@@ -1,8 +1,11 @@
 package Core.Services;
 
 import Core.DataStructures.Subscription;
+import Core.Interface.CustomLogger;
+import Core.Interface.LogLine;
 import Core.MainLogic.ControlPanel;
 import org.springframework.http.HttpEntity;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -15,19 +18,21 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @Service
+@EnableScheduling
 public class ServerStatusService {
     private static final String BOT_API_STATE_URL = "http://localhost:8080/bot-api/state";
     private static final String BOT_API_SUBSCRIPTION_STATE_URL = "http://localhost:8080/bot-api/subscriptionstate";
 
     private boolean serverConnection=true;
     private RestTemplate restTemplate = new RestTemplate();
-    private Date lastRequestTime;
+    private Date lastRequestTime=new Date();
 
     @Resource
     private CacheService cacheService;
-
     @Resource
     private ControlPanel controlPanel;
+    @Resource
+    private CustomLogger log;
 
     public void updateLastRequestTime(){
         lastRequestTime=new Date();
@@ -38,15 +43,20 @@ public class ServerStatusService {
         if (Instant.now().getEpochSecond()-lastRequestTime.getTime()/1000 > 120) {
             if (!checkState(BOT_API_STATE_URL, "")) {
                 serverConnection=false;
+                log.warning("WARNING: No connection to server");
             }
         }
         else{serverConnection=true;}
         if(serverConnection) {
-            List<Subscription> subList = cacheService.getAllActiveSubs();
+            List<Subscription> subList = cacheService.getAllSubs();
             for (Subscription s : subList) {
-                if (Instant.now().getEpochSecond() - s.getLastCommentTime().getTime()/1000 > 60) {
+                if (Instant.now().getEpochSecond() - s.getLastCommentTime().getTime()/1000 > 10) {
                     if (!checkState(BOT_API_SUBSCRIPTION_STATE_URL, s)) {
+
+                        cacheService.disableSub(s);
                         controlPanel.sendSubToApiBot(s);
+                        log.info("SUB: Subscription on post "+s.getPostId()+" turned inactive.",
+                                LogLine.TYPE_SUBSCRIPTION_INACTIVE);
                     }
                 }
             }

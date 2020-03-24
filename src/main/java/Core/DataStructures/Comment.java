@@ -1,12 +1,19 @@
 package Core.DataStructures;
 
+import Core.CachePackage.Cachable;
+import Core.CachePackage.Key;
+
 import java.io.Serializable;
 
-public class Comment implements Serializable {
+public class Comment implements Serializable, Cachable {
     private long postId;
     private long commentId;
     private String text;
     private boolean autoModerated=false;
+
+    private Key key=new Key(commentId,Comment.class);
+    @Override
+    public Key getKey(){return key;}
 
     public Comment(long postId, long commentId, String text) {
         this.postId = postId;

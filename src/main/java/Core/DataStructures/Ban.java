@@ -1,10 +1,16 @@
 package Core.DataStructures;
 
+import Core.CachePackage.Cachable;
+import Core.CachePackage.Key;
+
 import java.io.Serializable;
 
-public class Ban implements Serializable {
+public class Ban implements Serializable, Cachable {
     private long postId;
     private long commentId;
+    private Key key=new Key(commentId,Ban.class);
+    @Override
+    public Key getKey(){return key;}
 
     public Ban(Comment comment) {
         postId = comment.getPostId();

@@ -2,11 +2,12 @@ package Core.MainLogic;
 
 import Core.DataStructures.PostEntity;
 import Core.DataStructures.Subscription;
+import Core.Interface.CustomLogger;
+import Core.Interface.LogLine;
 import Core.Services.AutoModService;
 import Core.Services.CacheService;
 import Core.Services.DBService;
-import Core.UI.CommandConsole;
-import org.springframework.beans.factory.annotation.Autowired;
+import Core.Interface.CommandConsole;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -26,6 +27,8 @@ public class ControlPanel {
     private CacheService cacheService;
     @Resource
     private AutoModService autoModService;
+    @Resource
+    private CustomLogger log;
 
     private RestTemplate restTemplate = new RestTemplate();
 
@@ -34,14 +37,14 @@ public class ControlPanel {
         Subscription sub=new Subscription(postId, date,ControlPanel.adminId);
         dbService.addPost(new PostEntity(postId, date,date));
         cacheService.putSub(sub);
-
+        log.info("SUB: Subscribed to post " + sub.getPostId()+".", LogLine.TYPE_NEW_SUBSCRIPTION);
         if(sendToApiBot) {
             sendSubToApiBot(sub);
         }
     }
     public void sendSubToApiBot(Subscription sub){
         final HttpEntity<Subscription> request = new HttpEntity<>(sub);
-        restTemplate.postForLocation(botApiSubscribeUrl, request, Subscription.class);
+        //restTemplate.postForLocation(botApiSubscribeUrl, request, Subscription.class);
     }
     public void resetCache(){
         cacheService.resetCache();

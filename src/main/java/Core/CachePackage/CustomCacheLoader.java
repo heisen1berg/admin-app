@@ -8,11 +8,11 @@ import javax.annotation.Resource;
 import java.io.Serializable;
 
 @Component
-public class CustomCacheLoader extends CacheLoader<Key, Serializable> {
+public class CustomCacheLoader extends CacheLoader<Key, Cachable> {
     @Resource
     CacheStorage cacheStorage;
     @Override
-    public Serializable load(Key key){
+    public Cachable load(Key key){
         return cacheStorage.get(key);
     }
 }

@@ -1,19 +1,21 @@
-package Core.UI;
+package Core.Interface;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import javax.annotation.Resource;
 import javax.swing.*;
 
 import Core.MainLogic.ControlPanel;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 @Component
 public class CommandConsole extends JFrame {
     private static final String NEW_LINE = "\n--> ";
     private static final String WELCOME_MESSAGE="Type \"list\" for commands or /help for command description.";
 
-    @Autowired
+    @Resource
     private ControlPanel controlPanel;
+    @Resource
+    private LogConsole logConsole;
 
     private JTextArea textField = new JTextArea(WELCOME_MESSAGE+NEW_LINE);
     private ArrayList<String> commandHistory=new ArrayList();
@@ -136,7 +138,7 @@ public class CommandConsole extends JFrame {
                 return "";
             }
         };
-        definition="\nconfig - Configure application.\n";
+        /*definition="\nconfig - Configure application.\n";
         argDescription="\nArguments:\n"+
                 "/a <admin_id> - Give new admin ID;\n"+
                 "/u <api-bot_url> - Give new api-bot URL;"+
@@ -155,6 +157,42 @@ public class CommandConsole extends JFrame {
                     ControlPanel.botApiSubscribeUrl=argMatrix.subarguments[2][0];
                 }
                 return "";
+            }
+        };*/
+        definition="\nlog - Open log console and set filters.\n";
+        argDescription="\nArguments:\n"+
+                "/c - Add/remove filter on comments;\n"+
+                "/b - Add/remove filter on bans;\n"+
+                "/f - Show current filters;\n"+
+                "/s - Show log console;\n"+
+                "/help - Opens this message.\n\n"+
+                "Filter IDs:\n" +
+                "0 - Comments;\n"+
+                "1 - Bans.";
+        argVector=new String[]{"/help","/c","/b","/f","/s"};
+        subArgCount=new int[]{0,0,0,0,0};
+        incompatibleArgs=new int[][]{};
+        Command command_log=new Command("log",argVector,subArgCount,incompatibleArgs,definition,argDescription) {
+            @Override
+            protected String logic(ArgMatrix argMatrix) {
+                if(argMatrix.noArgMatches())return "Need at least one argument";
+                if(argMatrix.argument_matches[1]){
+                    logConsole.changeFilter(LogLine.TYPE_COMMENT_RECEIVED);
+                }
+                if(argMatrix.argument_matches[2]){
+                    logConsole.changeFilter(LogLine.TYPE_BAN_CREATED);
+                }
+                if(argMatrix.argument_matches[3]){
+                    String ret="";
+                    for(int i:logConsole.getFilters()){
+                        ret+=i +", ";
+                    }
+                    return ret.length()>0?ret.substring(0,ret.length()-2):"No filters";
+                }
+                if(argMatrix.argument_matches[4]){
+                    logConsole.showFrame();
+                }
+                return "OK";
             }
         };
     }

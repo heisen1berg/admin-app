@@ -1,13 +1,20 @@
 package Core.DataStructures;
 
 
+import Core.CachePackage.Cachable;
+import Core.CachePackage.Key;
+
 import java.io.Serializable;
 import java.util.Date;
-public class Subscription implements Serializable {
+public class Subscription implements Serializable, Cachable {
     private long adminId;
     private long postId;
     private Date lastCommentTime;
     private boolean activeFlag;
+
+    private Key key=new Key(postId,Subscription.class);
+    @Override
+    public Key getKey(){return key;}
 
     public Subscription(long postId, Date lastEditedTime, long adminId) {
         this.adminId=adminId;

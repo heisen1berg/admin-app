@@ -1,8 +1,11 @@
 package Core.MainLogic;
 
+import Core.CachePackage.SubscriptionNotFoundException;
 import Core.DataStructures.Comment;
 import Core.DataStructures.PostEntity;
 import Core.DataStructures.Subscription;
+import Core.Interface.CustomLogger;
+import Core.Interface.LogLine;
 import Core.Services.AutoModService;
 import Core.Services.CacheService;
 import Core.Services.DBService;
@@ -22,20 +25,23 @@ public class CommentFlow {
     private AutoModService amService;
     @Resource
     private BanFlow banFlow;
+    @Resource
+    private CustomLogger log;
 
     public void addComment(Comment comment) throws ExecutionException {
-        boolean auto_moderation_trigger=amService.process(comment);
-
-        cacheService.putComment(comment);
         try {
             cacheService.updateLastCommentTime(comment.getPostId());
         }
-        catch(CacheLoader.InvalidCacheLoadException e){
-            //игнорить
-            /*Date date=new Date();
-            cacheService.putSub(new Subscription(comment.getPostId(), date,ControlPanel.adminId));
-            dbService.addPost(new PostEntity(comment.getPostId(),date,date));*/
+        catch(SubscriptionNotFoundException e){
+            log.warning("WARNING: Received comment for unsubscribed post.");
+            return;
         }
+
+        boolean auto_moderation_trigger=amService.process(comment);
+
+        cacheService.putComment(comment);
+        log.info("COMMENT: Comment " + comment.getCommentId() + " on post "+ comment.getPostId()+" received.",
+                LogLine.TYPE_COMMENT_RECEIVED);
 
         if(auto_moderation_trigger){
             banFlow.createBan(comment);
