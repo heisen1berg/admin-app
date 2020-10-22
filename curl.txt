@@ -1,1 +1,24 @@
 curl -X POST http://localhost:8080/admin/addComment -H "Content-Type: application/json" -d "{\"commentId\":1,\"postId\":1,\"text\":\"asdawe1\"}"
+
+curl -X POST http://localhost:8080/temperature -H "Content-Type: application/json" -d "{\"msg\":\"msg\",\"lng\":\"msg\",\"latitude\":\"asdawe1\",\"longtitude\":\"msg\"}"
+
+curl -X POST http://localhost:8080/temperature -H "Content-Type: application/json" -d "{\"msg\":\"msg\",\"lng\":\"ru\",\"coordinates\":{\"latitude\":\"20\",\"longtitude\":\"20\"}}"
+
+
+http://api.openweathermap.org/data/2.5/weather?lat=20&lon=20&appid=6a22a3b190640923d4a1b14c0e9949fe
+
+
+curl -X GET http://localhost:8080/calculate -H "Upgrade: websocket" -H "Connection: Upgrade" -H "Sec-WebSocket-Key: Uc9l9TMkWGbHFD2qnFHltg==" -H "Sec-WebSocket-Protocol: v10.stomp, v11.stomp" -H "Sec-WebSocket-Version: 13" -H "Origin: http://localhost:8080" -H "Host: localhost:8080" -H "Content-Type: application/json" -d "{\"firstFun\":\"fun1\",\"secondFun\":\"fun2\",\"iterationCount\":2,\"outputMode\":\"mode\"}"
+
+{"firstFun":"fun1","secondFun":"fun2","iterationCount":2,"outputMode":"mode"}
+
+
+
+
+
+
+result=[];for(i=0;i<arg*500;i++){result[i]=getRandomIntInclusive(0,100000);}result=BubbleSort(result);function getRandomIntInclusive(min, max) {min = Math.ceil(min);max = Math.floor(max);return Math.floor(Math.random() * (max -min + 1)) + min;}function BubbleSort(A){var n = A.length;for (var i = 0; i < n-1; i++){ for (var j = 0; j < n-1-i; j++){ if (A[j+1] < A[j]){ var t = A[j+1]; A[j+1] = A[j]; A[j] = t;}}}return A;}
+
+
+
+result=[];for(i=0;i<arg*500;i++){result[i]=getRandomIntInclusive(0,100000);}result=MergeSort(result);function getRandomIntInclusive(min, max) {min = Math.ceil(min);max = Math.floor(max);return Math.floor(Math.random() * (max -min + 1)) + min;}function Merge(a,low,mid,high) { var b = new Array(high+1-low), h, i, j = mid+1, k, h = low, i = 0; while (h <= mid && j <= high ) { if (a[h] <= a[j]){ b[ i ]=a[h]; h++; } else { b[ i ]=a[j]; j++; } i++; } if (h > mid){ for (k = j; k <= high; k++){ b[ i ]=a[k]; i++; } } else { for (k = h; k <= mid; k++){ b[ i ]=a[k]; i++; } } for (k=0; k<=high-low; k++) a[k+low]=b[k]; return a; } function MergeSort(A) { function merge_sort(a,low,high) { if (low < high) { var mid = Math.floor((low+high)/2); merge_sort(a, low, mid); merge_sort(a, mid+1, high); Merge(a, low, mid, high); } } var n = A.length; merge_sort(A, 0, n-1); return A; }

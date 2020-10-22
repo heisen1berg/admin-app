@@ -2,50 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a142b2e-43b4-4119-8c7f-d0f94ed621b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../study/english/proj/VocApp/src/Core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/CacheStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/CachePackage/CacheStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/CustomCacheLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/CachePackage/CustomCacheLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/curl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/Cachable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/CacheStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/CustomCacheLoader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/Key.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Ban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Ban.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/PostEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Subscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/BanFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/MainLogic/BanFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/CommentFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/MainLogic/CommentFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/MainLogic/ControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/RestEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/MainLogic/RestEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/CacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Services/CacheService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Services/DBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/ServerStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Services/ServerStatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/UI/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/UI/CommandConsole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/CachePackage/CacheStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/CachePackage/CacheStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/CachePackage/CustomCacheLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/CachePackage/CustomCacheLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/CachePackage/Key.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/CachePackage/Key.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/DBPackage/PostRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/DataStructures/Ban.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/DataStructures/Ban.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/DataStructures/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/DataStructures/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/DataStructures/PostEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/DataStructures/PostEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/DataStructures/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/DataStructures/Subscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/CachePackage/SubscriptionNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DBPackage/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Ban.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/PostEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/DataStructures/Subscription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Interface/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Interface/CommandConsole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Interface/CustomLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Interface/LogConsole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Interface/LogLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/BanFlow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/CommentFlow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/ControlPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/MainLogic/RestEventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/AutoModService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/services/AutoModService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/CacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/services/CacheService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/services/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Services/ServerStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/services/ServerStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Interface/CommandConsole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Interface/LogConsole$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Interface/LogConsole$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Interface/LogConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Interface/LogConsole.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/MainLogic/BanFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/MainLogic/BanFlow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/MainLogic/CommentFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/MainLogic/CommentFlow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/MainLogic/ControlPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/MainLogic/ControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/MainLogic/ControlPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/MainLogic/RestEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/MainLogic/RestEventController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/Services/CacheService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Services/CacheService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/Services/DBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Services/DBService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Core/Services/ServerStatusService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Core/Services/ServerStatusService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/Command$ArgMatrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/CommandConsole$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/CommandConsole$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/CommandConsole$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/CommandConsole$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Core/UI/CommandConsole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Table_ApiBotServers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Core/Table_Subs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/admin-app.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +91,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -100,7 +101,7 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Core.Main" />
+      <option name="MAIN_CLASS_NAME" value="core.Main" />
       <module name="admin-app" />
       <extension name="coverage">
         <pattern>
@@ -121,7 +122,7 @@
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="admin-app" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="Core.Main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="core.Main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,89 +165,67 @@
       <workItem from="1584565805628" duration="2836000" />
       <workItem from="1584746242420" duration="424000" />
       <workItem from="1585002008270" duration="21130000" />
+      <workItem from="1585063595709" duration="174000" />
+      <workItem from="1585096006169" duration="1068000" />
+      <workItem from="1585160579535" duration="2526000" />
+      <workItem from="1585922874473" duration="15942000" />
+      <workItem from="1586029106730" duration="13302000" />
+      <workItem from="1586341922830" duration="1814000" />
+      <workItem from="1587000669712" duration="85000" />
+      <workItem from="1597273684714" duration="573000" />
+      <workItem from="1597280241151" duration="1954000" />
+      <workItem from="1599152351805" duration="564000" />
+      <workItem from="1599153853638" duration="1567000" />
+      <workItem from="1600971393174" duration="5102000" />
+      <workItem from="1601066058901" duration="1151000" />
+      <workItem from="1601482743813" duration="1145000" />
+      <workItem from="1601537981224" duration="914000" />
+      <workItem from="1601705880870" duration="1835000" />
+      <workItem from="1601730895632" duration="24000" />
+      <workItem from="1601989118850" duration="593000" />
+      <workItem from="1601992439502" duration="69000" />
+      <workItem from="1602974146818" duration="61000" />
+      <workItem from="1603371740645" duration="289000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="22" key="#Project_Structure" timestamp="1581903692794">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1603372206182">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1581903692794" />
-    <state x="387" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583447788154">
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1603372206182" />
+    <state width="1323" height="138" key="GridCell.Tab.0.bottom" timestamp="1599152968441">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="387" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583447788154" />
-    <state x="479" y="235" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1583344032029">
+    <state width="1323" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599152968441" />
+    <state width="1323" height="138" key="GridCell.Tab.0.center" timestamp="1599152968441">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="479" y="235" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1583344032029" />
-    <state x="357" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584281149770">
+    <state width="1323" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599152968441" />
+    <state width="1323" height="138" key="GridCell.Tab.0.left" timestamp="1599152968440">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="357" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584281149770" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1584746701319">
+    <state width="1323" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599152968440" />
+    <state width="1323" height="138" key="GridCell.Tab.0.right" timestamp="1599152968441">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584746701319" />
-    <state width="1323" height="138" key="GridCell.Tab.0.bottom" timestamp="1585023842947">
+    <state width="1323" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599152968441" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1600981620795">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585023842947" />
-    <state width="1323" height="138" key="GridCell.Tab.0.center" timestamp="1585023842947">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1600981620795" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1601707360470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585023842947" />
-    <state width="1323" height="138" key="GridCell.Tab.0.left" timestamp="1585023842947">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585023842947" />
-    <state width="1323" height="138" key="GridCell.Tab.0.right" timestamp="1585023842947">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585023842947" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1583800545713">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583800545713" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1583800545712">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1583800545712" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1583800545712">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1583800545712" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1583800545712">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1583800545712" />
-    <state x="368" y="38" key="Maven.ArtifactSearchDialog" timestamp="1583344159866">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="368" y="38" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1583344159866" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1581739445687">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581739445687" />
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583936903942">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1583936903942" />
-    <state x="447" y="82" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583693543487">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="447" y="82" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1583693543487" />
-    <state x="65" y="0" key="new project wizard" timestamp="1584746719115">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1584746719115" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583874918807">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583874918807" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1601707360470" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

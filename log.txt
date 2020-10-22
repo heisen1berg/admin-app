@@ -1,5 +1,5 @@
-2020-03-24 02:09:04.104  INFO 8424 --- [main] Core.Main                                : Starting Main on LAPTOP-GPVJ8JJD with PID 8424 (C:\DATA\Cloud\mail\admin-app\target\classes started by qwerty in C:\DATA\Cloud\mail\admin-app)
-2020-03-24 02:09:04.126  INFO 8424 --- [main] Core.Main                                : No active profile set, falling back to default profiles: default
+2020-03-24 02:09:04.104  INFO 8424 --- [main] core.Main                                : Starting Main on LAPTOP-GPVJ8JJD with PID 8424 (C:\DATA\Cloud\mail\admin-app\target\classes started by qwerty in C:\DATA\Cloud\mail\admin-app)
+2020-03-24 02:09:04.126  INFO 8424 --- [main] core.Main                                : No active profile set, falling back to default profiles: default
 2020-03-24 02:09:15.262  INFO 8424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-03-24 02:09:16.979  INFO 8424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 761ms. Found 1 JPA repository interfaces.
 2020-03-24 02:09:19.452  INFO 8424 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$69b34fd4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
@@ -66,10 +66,10 @@ com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the ho
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at Core.Main.main(Main.java:26) ~[classes/:na]
+	at core.Main.main(Main.java:26) ~[classes/:na]
 
 2020-03-24 02:10:00.409  INFO 8424 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-03-24 02:10:01.218  INFO 8424 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.1.Final}
+2020-03-24 02:10:01.218  INFO 8424 --- [main] org.hibernate.Version                    : HHH000412: Hibernate core {5.4.1.Final}
 2020-03-24 02:10:02.404  INFO 8424 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
 2020-03-24 02:10:03.034  INFO 8424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-03-24 02:10:36.083 ERROR 8424 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
@@ -128,7 +128,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the ho
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at Core.Main.main(Main.java:26) ~[classes/:na]
+	at core.Main.main(Main.java:26) ~[classes/:na]
 
 2020-03-24 02:10:36.086  WARN 8424 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : The TCP/IP connection to the host localhost, port 1433 has failed. Error: "connect timed out. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
 2020-03-24 02:10:36.123  WARN 8424 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
@@ -154,7 +154,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
 	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) [spring-boot-2.2.4.RELEASE.jar:2.2.4.RELEASE]
-	at Core.Main.main(Main.java:26) [classes/:na]
+	at core.Main.main(Main.java:26) [classes/:na]
 Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.1.Final.jar:5.4.1.Final]
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.1.Final.jar:5.4.1.Final]
