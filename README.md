@@ -1,1 +1,3 @@
-admin-app
+Microservice for social network moderation. It accepts text messages, searches for unacceptable language in them and informs the social network back, if violations found. It utilizes RESTful architecture for communications between microservices, uses MSSQL as database, has custom-written console GUI.
+
+Микросервис-модератор социальной сети. Принимает тексты сообщений, ищет в них недопустимую лексику и информирует о таких сообщениях соц. сеть. Использует RESTful-архитектуру для сообщения между микросервисами, MSSQL как базу данных, также есть собственноручно написанный консольный интерфейс.
